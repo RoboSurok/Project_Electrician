@@ -7,7 +7,8 @@ cur = con.cursor()
 cur.execute('''CREATE TABLE IF NOT EXISTS data_log 
             (id INTEGER PRIMARY KEY AUTOINCREMENT, 
             skin TEXT, 
-            wins INTEGER)''')
+            wins INTEGER,
+            lose INTEGER)''')
 
 [print(el) for el in cur.execute('SELECT * FROM data_log').fetchall()]
 
